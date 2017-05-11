@@ -3,6 +3,7 @@ package com.lance.demo.spring;
 import com.google.common.util.concurrent.AbstractIdleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -10,8 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * Created by perdonare on 2017/5/9.
  */
 @Slf4j
-@Configuration
-@EnableTransactionManagement
+@ComponentScan(basePackages = {"com.lance.demo.spring"})
 public class App extends AbstractIdleService {
     private AnnotationConfigApplicationContext context;
 
