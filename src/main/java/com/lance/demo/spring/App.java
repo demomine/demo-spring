@@ -10,8 +10,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * Created by perdonare on 2017/5/9.
  */
 @Slf4j
-@Configuration
-@EnableTransactionManagement
 public class App extends AbstractIdleService {
     private AnnotationConfigApplicationContext context;
 
