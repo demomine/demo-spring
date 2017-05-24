@@ -1,4 +1,4 @@
-package com.lance.demo.spring.test;
+package com.lance.demo.springboot.test;
 
 import com.lance.demo.spring.TestBase;
 import org.dbunit.Assertion;
@@ -15,6 +15,7 @@ import java.io.FileInputStream;
 
 /**
  * Created by perdonare on 2017/5/12.
+ * DBTest
  */
 
 public class DBUnitTest extends TestBase {
