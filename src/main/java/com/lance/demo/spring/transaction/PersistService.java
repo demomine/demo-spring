@@ -24,7 +24,7 @@ public class PersistService {
         classMapper.insert(classPO);
     }
 
-    @Transactional(propagation = Propagation.REQUIRED)
+    @Transactional
     public void addClassWithTx(ClassPO classPO) {
         classMapper.insert(classPO);
     }

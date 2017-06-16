@@ -72,6 +72,7 @@ Spring的事务管理其实就是对Spring AOP的一个很好的应用。
 7.  noRollbackFor 设定遇到时不需要回滚的异常，值同上rollbackFor
 8.  noRollbackForClassName ......
 
+### `@Transaction`原理分析
 
 
 #   Spring 单元测试回滚总结
