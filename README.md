@@ -109,6 +109,12 @@
     5.4.    ThreadLocal target sources
     
 ### 定义新 Advice types
+
+
+##  其他
+### 异常
+1.  Bean named 'aopDemo' is expected to be of type 'com.lance.demo.spring.aop.AopDemo' but was actually of type 'com.sun.proxy.$Proxy29'
+    >设置 proxyFactoryBean.setProxyTargetClass(true);
     
 
     
