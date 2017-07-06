@@ -10,4 +10,8 @@ public class AopDemo implements AopDemoInterface{
     public void hello() {
         log.info("hello aop");
     }
+
+    public void hello2() {
+        log.info("hello aop 2");
+    }
 }

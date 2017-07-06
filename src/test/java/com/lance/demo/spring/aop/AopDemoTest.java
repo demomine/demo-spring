@@ -12,6 +12,7 @@ public class AopDemoTest extends TestBase{
     @Test
     public void hello() throws Exception {
         aopDemo.hello();
+        aopDemo.hello2();
     }
 
 }

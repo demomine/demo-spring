@@ -3,6 +3,7 @@ package com.lance.demo.spring.config;
 import com.lance.demo.spring.aop.AopDemo;
 import com.lance.demo.spring.aop.AopDemoInterface;
 import com.lance.demo.spring.aop.AopInterceptor;
+import com.lance.demo.spring.aop.AopPointcut;
 import org.springframework.aop.PointcutAdvisor;
 import org.springframework.aop.framework.ProxyFactoryBean;
 import org.springframework.aop.support.DefaultPointcutAdvisor;
@@ -15,7 +16,7 @@ import org.springframework.context.annotation.Primary;
 @Configuration
 @EnableAspectJAutoProxy
 public class AopConfig {
-    @Bean@Primary
+    // @Bean@Primary
     public ProxyFactoryBean proxyFactoryBean(AopDemo aopDemo,AopInterceptor aopInterceptor) throws ClassNotFoundException {
         ProxyFactoryBean proxyFactoryBean = new ProxyFactoryBean();
         //proxyFactoryBean.setProxyInterfaces(new Class[]{AopDemoInterface.class});//代理的接口
@@ -38,14 +39,19 @@ public class AopConfig {
         return proxyFactoryBean;
     }
 
-    /*@Bean@Primary
-    public PointcutAdvisor pointcutAdvisor(AopInterceptor aopInterceptor) {
-        DefaultPointcutAdvisor pointcutAdvisor = new DefaultPointcutAdvisor();
-        NameMatchMethodPointcut nameMatchMethodPointcut = new NameMatchMethodPointcut();
-        nameMatchMethodPointcut.addMethodName("hello");
-        pointcutAdvisor.setAdvice(aopInterceptor);
-        pointcutAdvisor.setPointcut(nameMatchMethodPointcut);
-        return pointcutAdvisor;
-    }*/
+    @Bean@Primary
+    public ProxyFactoryBean proxyFactoryBean(AopDemo aopDemo,AopInterceptor aopInterceptor, AopPointcut aopPointcut) throws ClassNotFoundException {
+        ProxyFactoryBean proxyFactoryBean = new ProxyFactoryBean();
+        proxyFactoryBean.setTarget(aopDemo);
+        proxyFactoryBean.addAdvisor(new DefaultPointcutAdvisor(aopPointcut,aopInterceptor));
+        proxyFactoryBean.setProxyTargetClass(true);
+        return proxyFactoryBean;
+    }
+
+    //@Bean
+    public PointcutAdvisor pointcutAdvisor2(AopInterceptor aopInterceptor, AopPointcut aopPointcut) {
+        return new DefaultPointcutAdvisor(aopPointcut,aopInterceptor);
+        // return new DefaultPointcutAdvisor(new AopInterceptor(), new AopPointcut());
+    }
 
 }

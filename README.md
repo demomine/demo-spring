@@ -17,6 +17,13 @@
 4.  实现
     4.1.    JdkRegexpMethodPointcut
     4.2.    RegexpMethodPointcutAdvisor
+    4.3.    StaticMethodMatcherPointcut
+    4.4.    DynamicMethodMatcherPointcut
+    4.5.    AnotationMatchingPointcut
+    4.6.    NameMatcherPointcut
+    4.7.    AspectJExpressionPointcut
+    4.8.    ControlFlowPointcut
+    4.9.    ComposablePointcut
 5.  pointcut类型
     5.1.    Attribute-driven
     5.2.    Dynamic pointcuts
