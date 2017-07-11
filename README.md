@@ -122,7 +122,11 @@
 ### 异常
 1.  Bean named 'aopDemo' is expected to be of type 'com.lance.demo.spring.aop.AopDemo' but was actually of type 'com.sun.proxy.$Proxy29'
     >设置 proxyFactoryBean.setProxyTargetClass(true);
-    
+
+
+### 参考
+1.  `http://dba10g.blog.51cto.com/764602/1786250`
+2.
 
     
     

@@ -6,6 +6,7 @@ import com.lance.demo.spring.aop.AopInterceptor;
 import com.lance.demo.spring.aop.AopPointcut;
 import org.springframework.aop.PointcutAdvisor;
 import org.springframework.aop.framework.ProxyFactoryBean;
+import org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator;
 import org.springframework.aop.support.DefaultPointcutAdvisor;
 import org.springframework.aop.support.NameMatchMethodPointcut;
 import org.springframework.context.annotation.Bean;
@@ -39,7 +40,7 @@ public class AopConfig {
         return proxyFactoryBean;
     }
 
-    @Bean@Primary
+    //@Bean @Primary
     public ProxyFactoryBean proxyFactoryBean(AopDemo aopDemo,AopInterceptor aopInterceptor, AopPointcut aopPointcut) throws ClassNotFoundException {
         ProxyFactoryBean proxyFactoryBean = new ProxyFactoryBean();
         proxyFactoryBean.setTarget(aopDemo);
@@ -54,4 +55,12 @@ public class AopConfig {
         // return new DefaultPointcutAdvisor(new AopInterceptor(), new AopPointcut());
     }
 
+    @Bean
+    public BeanNameAutoProxyCreator logInterceptor() {
+        BeanNameAutoProxyCreator beanNameAutoProxyCreator = new BeanNameAutoProxyCreator();
+        beanNameAutoProxyCreator.setBeanNames("aopDemo");
+        beanNameAutoProxyCreator.setInterceptorNames("aopInterceptor");
+        beanNameAutoProxyCreator.setProxyTargetClass(true);
+        return beanNameAutoProxyCreator;
+    }
 }
