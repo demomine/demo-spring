@@ -19,7 +19,7 @@
     4.2.    RegexpMethodPointcutAdvisor
     4.3.    StaticMethodMatcherPointcut
     4.4.    DynamicMethodMatcherPointcut
-    4.5.    AnotationMatchingPointcut
+    4.5.    AnnotationMatchingPointcut
     4.6.    NameMatcherPointcut
     4.7.    AspectJExpressionPointcut
     4.8.    ControlFlowPointcut
