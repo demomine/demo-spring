@@ -21,6 +21,5 @@ import java.io.FileInputStream;
  */
 @Slf4j
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes = {App.class})
 public class TestBase {
 }

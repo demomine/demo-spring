@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.lance.demo</groupId>
 	<artifactId>demo-spring</artifactId>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<version>1.0.0-SNAPSHOT</version>
 	<properties>
 		<java.version>1.8</java.version>
@@ -22,6 +22,7 @@
 		<mockito.version>2.0.2-beta</mockito.version>
 		<dbunit.version>2.5.3</dbunit.version>
 		<mysql.version>6.0.6</mysql.version>
+		<servelet-api.version>3.1</servelet-api.version>
 	</properties>
 
 	<dependencies>
@@ -37,9 +38,20 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${spring.version}</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.google.guava</groupId>
@@ -50,6 +62,11 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>${lombok.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.0.pr3</version>
 		</dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
