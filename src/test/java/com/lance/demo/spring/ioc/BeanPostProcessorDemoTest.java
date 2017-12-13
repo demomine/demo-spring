@@ -20,11 +20,11 @@ public class BeanPostProcessorDemoTest {
     @Autowired
     private BeanPostProcessorDemo beanPostProcessorDemo;
     @Autowired
-    private BeanCycleDemo beanCycleDemo;
+    private BeanRecycleDemo beanRecycleDemo;
     @Test
     public void aspect() throws Exception {
         //beanPostProcessorDemo.aspect();
-        assertEquals("lance",beanCycleDemo.getName());
+        assertEquals("lance", beanRecycleDemo.getName());
     }
 
 }

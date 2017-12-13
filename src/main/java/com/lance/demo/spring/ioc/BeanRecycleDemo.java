@@ -17,7 +17,7 @@ import javax.annotation.PreDestroy;
  */
 @Slf4j
 @Service
-public class BeanCycleDemo implements InitializingBean,DisposableBean, BeanPostProcessor {
+public class BeanRecycleDemo implements InitializingBean,DisposableBean, BeanPostProcessor {
     @Setter
     @Getter
     private String name;

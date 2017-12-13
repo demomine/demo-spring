@@ -1,5 +1,7 @@
 #spring
+
 ##IOC
+
 ### 生命周期管理
 1.  实现`InitializingBean`, `DisposableBean`接口
 2.  使用`@PostConstruct`, `@PreDestroy`注解
@@ -43,4 +45,7 @@
 3.  InstantiationAwareBeanPostProcessor
 4.  MergedBeanDefinitionPostProcessor
 5.  SmartInstantiationAwareBeanPostProcessor
+
+### 代码方式手动生成bean
+1.  BeanDefinitionRegistryPostProcessor
     
