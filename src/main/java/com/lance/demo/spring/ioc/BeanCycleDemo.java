@@ -6,21 +6,23 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 /**
  * Created by perdonare on 2017/6/14.
  */
 @Slf4j
 @Service
-public class BeanRecycleDemo implements InitializingBean,DisposableBean, BeanPostProcessor {
-    @Setter
-    @Getter
-    private String name;
+public class BeanCycleDemo implements InitializingBean,DisposableBean, BeanPostProcessor {
+
     @Override
     public void destroy() throws Exception {
        log.info("BeanCycleDemo destroy");

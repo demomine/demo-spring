@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class BeanFactoryPostProcessorDemo implements BeanFactoryPostProcessor {
-
     /**
      * 错误的示例,无法获取 beanCycleDemo 的属性 因为此时  beanCycleDemo还未被实例化
      * @param configurableListableBeanFactory
