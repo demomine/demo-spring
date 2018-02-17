@@ -3,6 +3,8 @@ package com.lance.demo.spring.config;
 import lombok.*;
 
 import java.security.KeyStore;
+import java.security.PrivateKey;
+import java.security.PublicKey;
 
 @Getter
 @Setter
@@ -15,9 +17,9 @@ public class KeyPair {
 
     private String bizType;
 
-    private KeyStore privateKey;
+    private PrivateKey privateKey;
 
-    private KeyStore publicKey;
+    private PublicKey publicKey;
 
     private String secretKey;
 

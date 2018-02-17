@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
  * Created by perdonare on 2017/6/14.
  */
 @Slf4j
-@Service
+//@Service
 public class BeanFactoryPostProcessorDemo implements BeanFactoryPostProcessor {
     /**
      * 错误的示例,无法获取 beanCycleDemo 的属性 因为此时  beanCycleDemo还未被实例化

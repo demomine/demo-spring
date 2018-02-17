@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  * Created by perdonare on 2017/6/14.
  */
 @Slf4j
-@Service
+//@Service
 public class BeanPostProcessorDemo implements BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
